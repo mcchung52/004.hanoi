@@ -1,0 +1,31 @@
+.container {
+  width: 90%;
+  min-width: 100px;
+  padding-left: 8%;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  }
+.tower {
+  border-radius: 10px;
+  border: 1px solid #000;
+  /* margin: 10px; */ 
+  /*width: 30%;*/
+  min-width: 30%;
+  min-height: 75vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.disc.selected {
+	border: 5px solid #0F0;
+}
+.disc {
+  /* margin-left: 30%; */
+  height: 30px;
+  /*width: 60px;*/
+  border: 1px solid #000;
+  padding-top: 10px;
+  text-align: center;
+}

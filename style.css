@@ -1,22 +1,30 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
 .container {
   width: 90%;
   min-width: 100px;
   padding-left: 8%;
   position: absolute;
-  top: 60px;
+  top: 130px;
   left: 0px;
   }
 .tower {
   border-radius: 10px;
-  border: 1px solid #000;
+  /*border: 1px solid #000;*/
   /* margin: 10px; */ 
   /*width: 30%;*/
   min-width: 30%;
-  min-height: 75vh;
+  min-height: 70vh;
   padding-top: 20px;
   padding-bottom: 20px;
   display: inline-block;
   vertical-align: middle;
+  position:relative;
+  background-color: white;
+
 }
 .disc.selected {
 	border: 5px solid #0F0;
@@ -29,3 +37,8 @@
   padding-top: 10px;
   text-align: center;
 }
+ .discBag {
+  position: absolute;
+  bottom: 3%;
+  width: 100%;
+} 

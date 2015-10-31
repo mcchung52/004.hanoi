@@ -13,15 +13,11 @@ body {
   }
 .tower {
   border-radius: 10px;
-  /*border: 1px solid #000;*/
-  /* margin: 10px; */ 
-  /*width: 30%;*/
   min-width: 30%;
   min-height: 70vh;
   padding-top: 20px;
   padding-bottom: 20px;
   display: inline-block;
-  vertical-align: middle;
   position:relative;
   background-color: white;
 
@@ -30,9 +26,7 @@ body {
 	border: 5px solid #0F0;
 }
 .disc {
-  /* margin-left: 30%; */
   height: 30px;
-  /*width: 60px;*/
   border: 1px solid #000;
   padding-top: 10px;
   text-align: center;

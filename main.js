@@ -6,36 +6,29 @@ $(document).ready(function(){
 });
 
 function init() {
-	drawDiscs();
+	$('.discBag').empty();
+	var discNum = $('#discno').val();
+	if (discNum>0) {
+		$('#discno').prop('disabled',true);//lock input box
+		drawDiscs(discNum);		
+	}
 	//wire up events - user clicks tower, select top disc
   $('.tower').click(towerClicked);
 }
 
-function drawDiscs() {
-	$('.discBag').empty();
-	$('.tower').css('padding-left',0);
-	$('.tower').css('padding-right',0);
-
-	$('#discno').prop('disabled',true);//lock input box
-	var n = $('#discno').val();
-
-  if (n>7) {
-  	$('.tower').css('padding-left',(n-7)*10+'px');//set min width of tower higher
-  	$('.tower').css('padding-right',(n-7)*10+'px');
-  }
-
-	var minsize = 30 - 5*(n>7?n-7:0); //30%
-	var startOffset = 33 + 5*(n>7?n-7:0);
+function drawDiscs(n) {
+	var i=100;
 	while (n>0) {
-		var disc = $('<div>');
+  	var disc = $('<div>');
 		disc.addClass('disc');
 		disc.attr('id',n);
-		disc.css('margin-left',(startOffset - 5*(n-1))+'%'); //depending on disc #, size changes
-		disc.css('width',(minsize + 10*(n-1))+'%');
 		disc.css('background-color','#'+Math.floor(Math.random()*16*16*16).toString(16));
 		disc.text(n);
+		disc.css('width', i+'%');
+		disc.css('margin-left', (100-i)/2+'%');
 		$('#left').find('.discBag').prepend(disc); //tower->discBag->disc
-		n--;	
+		n--;
+		i-=5;
 	}
 }
 

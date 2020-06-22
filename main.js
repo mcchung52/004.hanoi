@@ -1,4 +1,4 @@
-'use strict';		// Cade's
+'use strict';
 
 $(document).ready(function(){
 	$('#start').click(init);
